@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App Clima</title>
+  <link rel="stylesheet" href="src/style/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+</head>
+
+<body id="body">
+  <div class="container">
+    <div id="caja1">
+      <div id="name">
+        <i class="fa-solid fa-location-pin"></i>
+        <h1 id="ubicacion"></h1>
+        <h1 id="pais"></h1>
+      </div>
+      <form action="" id="search-form">
+        <input type="text" autocomplete="off" name="" id="search" class="search" placeholder="Buscar" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+    </div>
+    <div id="caja2">
+      <div class="cont-img">
+        <img src="" alt="" id="icono" width="100px" id="img" />
+      </div>
+      <p id="temperatura-valor"></p>
+    </div>
+    <div id="caja3">
+      <div>
+        <p id="text-veloc"><i class="fa-solid fa-wind"></i> Viento</p>
+        <p id="viento-velocidad"></p>
+      </div>
+      <div>
+        <p><i class="fa-solid fa-droplet"></i> Humedad</p>
+        <p id="humidity"></p>
+      </div>
+      <div>
+        <p><i class="fa-solid fa-eye"></i> Visibilidad</p>
+        <p id="visibility"></p>
+      </div>
+      <div>
+        <p><i class="bi bi-speedometer"></i> Presión</p>
+        <p id="pressure"></p>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/07506e120e.js" crossorigin="anonymous"></script>
+  <script src="src/js/app.js" type="module"></script>
+</body>
+
+</html>
