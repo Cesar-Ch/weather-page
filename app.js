@@ -1,3 +1,14 @@
+import cloudyDay3 from "/img/cloudy-day-3.svg";
+import cloudyNight3 from "/img/cloudy-night-3.svg";
+import cloudy from "/img/cloudy.svg";
+import Day from "/img/day.svg";
+import Night from "/img/night.svg";
+import Rainy3 from "/img/rainy-3.svg";
+import Rainy6 from "/img/rainy-6.svg";
+import Snowy6 from "/img/snowy-6.svg";
+import Thunder from "/img/thunder.svg";
+
+
 window.addEventListener("load", () => {
   let lon;
   let lat;
@@ -17,7 +28,9 @@ window.addEventListener("load", () => {
     navigator.geolocation.getCurrentPosition((posicion) => {
       lon = posicion.coords.longitude;
       lat = posicion.coords.latitude;
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_API_CLIMA}`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${
+        import.meta.env.VITE_API_CLIMA
+      }`;
       fetch(url)
         .then((response) => {
           return response.json();
@@ -35,82 +48,82 @@ window.addEventListener("load", () => {
           pressure.textContent = `${data.main.pressure} mbar`;
           switch (data.weather[0].icon) {
             case "01n":
-              icono.src = "../img/animated/night.svg";
+              icono.src = `${Night}`;
               body.style.background =
                 "linear-gradient(to right top, #000428, #004e92)";
               break;
             case "02n":
-              icono.src = "../img/animated/cloudy-night-3.svg";
+              icono.src = `${cloudyNight3}`;
               body.style.background =
                 "linear-gradient(to right top, #000428, #004e92)";
               break;
             case "03n":
-              icono.src = "../img/animated/cloudy.svg";
+              icono.src = `${cloudy}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "04n":
-              icono.src = "../img/animated/cloudy.svg";
+              icono.src = `${cloudy}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "09n":
-              icono.src = "../img/animated/rainy-6.svg";
+              icono.src = `${Rainy6}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "10n":
-              icono.src = "../img/animated/rainy-6.svg";
+              icono.src = `${Rainy6}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "11n":
-              icono.src = "../img/animated/thunder.svg";
+              icono.src = `${Thunder}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "13n":
-              icono.src = "../img/animated/snowy-6.svg";
+              icono.src = `${Snowy6}`;
               body.style.background =
                 "linear-gradient(to right top, #000428, #004e92)";
               break;
             case "01d":
-              icono.src = "../img/animated/day.svg";
+              icono.src = `${Day}`;
               body.style.background =
                 "linear-gradient(to right bottom, #00b4db, #0083b0)";
               break;
             case "02d":
-              icono.src = "../img/animated/cloudy-day-3.svg";
+              icono.src = `${cloudyDay3}`;
               body.style.background =
                 "linear-gradient(to right bottom, #00b4db, #0083b0)";
               break;
             case "03d":
-              icono.src = "../img/animated/cloudy.svg";
+              icono.src = `${cloudy}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "04d":
-              icono.src = "../img/animated/cloudy.svg";
+              icono.src = `${cloudy}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "09d":
-              icono.src = "../img/animated/rainy-6.svg";
+              icono.src = `${Rainy6}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "10d":
-              icono.src = "../img/animated/rainy-3.svg";
+              icono.src = `${Rainy3}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "11d":
-              icono.src = "../img/animated/thunder.svg";
+              icono.src = `${Thunder}`;
               body.style.background =
                 "linear-gradient(to right top, #1B356E, #4783C1)";
               break;
             case "13d":
-              icono.src = "../img/animated/snowy-6.svg";
+              icono.src = `${Snowy6}`;
               body.style.background =
                 "linear-gradient(to right bottom, #00b4db, #0083b0)";
               break;
@@ -125,7 +138,9 @@ window.addEventListener("load", () => {
   }
   form.addEventListener("submit", onSubmit);
   function search(local) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${local}&appid=${import.meta.env.VITE_API_CLIMA}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${local}&appid=${
+      import.meta.env.VITE_API_CLIMA
+    }`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -140,82 +155,82 @@ window.addEventListener("load", () => {
         searchBox.value = "";
         switch (data.weather[0].icon) {
           case "01n":
-            icono.src = "../img/animated/night.svg";
+            icono.src = `${Night}`;
             body.style.background =
               "linear-gradient(to right top, #000428, #004e92)";
             break;
           case "02n":
-            icono.src = "../img/animated/cloudy-night-3.svg";
+            icono.src = `${cloudyNight3}`;
             body.style.background =
               "linear-gradient(to right top, #000428, #004e92)";
             break;
           case "03n":
-            icono.src = "../img/animated/cloudy.svg";
+            icono.src = `${cloudy}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "04n":
-            icono.src = "../img/animated/cloudy.svg";
+            icono.src = `${cloudy}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "09n":
-            icono.src = "../img/animated/rainy-6.svg";
+            icono.src = `${Rainy6}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "10n":
-            icono.src = "../img/animated/rainy-6.svg";
+            icono.src = `${Rainy6}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "11n":
-            icono.src = "../img/animated/thunder.svg";
+            icono.src = `${Thunder}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "13n":
-            icono.src = "../img/animated/snowy-6.svg";
+            icono.src = `${Snowy6}`;
             body.style.background =
               "linear-gradient(to right top, #000428, #004e92)";
             break;
           case "01d":
-            icono.src = "../img/animated/day.svg";
+            icono.src = `${Day}`;
             body.style.background =
               "linear-gradient(to right bottom, #00b4db, #0083b0)";
             break;
           case "02d":
-            icono.src = "../img/animated/cloudy-day-3.svg";
+            icono.src = `${cloudyDay3}`;
             body.style.background =
               "linear-gradient(to right bottom, #00b4db, #0083b0)";
             break;
           case "03d":
-            icono.src = "../img/animated/cloudy.svg";
+            icono.src = `${cloudy}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "04d":
-            icono.src = "../img/animated/cloudy.svg";
+            icono.src = `${cloudy}`;
             body.style.background =
               " linear-gradient(to right top, #1B356E, #4783C1) ";
             break;
           case "09d":
-            icono.src = "../img/animated/rainy-6.svg";
+            icono.src = `${Rainy6}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "10d":
-            icono.src = "../img/animated/rainy-3.svg";
+            icono.src = `${Rainy3}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "11d":
-            icono.src = "../img/animated/thunder.svg";
+            icono.src = `${Thunder}`;
             body.style.background =
               "linear-gradient(to right top, #1B356E, #4783C1)";
             break;
           case "13d":
-            icono.src = "../img/animated/snowy-6.svg";
+            icono.src = `${Snowy6}`;
             body.style.background =
               "linear-gradient(to right bottom, #00b4db, #0083b0)";
             break;
